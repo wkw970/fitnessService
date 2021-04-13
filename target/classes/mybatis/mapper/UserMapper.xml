@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.atguigu.fit.mapper.UserMapper">
+    <select id="getUserInfo" resultType="com.atguigu.fit.bean.User">
+        select * from userinfo where nickname=#{user} AND password=#{password}
+    </select>
+
+
+    <update id="updateUserInfo">
+        update userinfo set nickname=#{nickname} where tel=#{tel}
+    </update>
+
+    <update id="updateUserIcon">
+        update userinfo set icon=#{url} where tel=#{tel}
+    </update>
+
+    <select id="queryIsExistUserByTel" resultType="com.atguigu.fit.bean.User">
+        select * from userinfo where tel=#{tel}
+    </select>
+</mapper>

@@ -1,0 +1,3 @@
+com\test\boot\MainApplication.class
+com\test\boot\controller\HelloController.class
+com\test\boot\controller\DataController.class
